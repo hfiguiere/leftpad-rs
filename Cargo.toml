@@ -1,6 +1,6 @@
 [package]
 name = "leftpad"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Hubert Figuière <hub@figuiere.net>"]
 license = "BSD-2-Clause"
 description = "Pad a string to the left"
