@@ -25,6 +25,8 @@ pub fn left_pad_char(s: &str, pad: u32, padchar: char) -> String
 #[test]
 fn pad_test() {
 
+    assert_eq!(left_pad("foo", 0), "foo");
+    assert_eq!(left_pad_char("bar", 0, 'Y'), "bar");
     assert_eq!(left_pad("foo", 2), "  foo");
     assert_eq!(left_pad_char("foo", 2, 'X'), "XXfoo");
     assert_eq!(left_pad_char("bar", 5, '-'), "-----bar");
