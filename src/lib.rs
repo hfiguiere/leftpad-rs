@@ -11,7 +11,7 @@ pub fn left_pad(s: &str, pad: u32) -> String
 /// pad a string to the left with ``pad`` ``padchar``
 pub fn left_pad_char(s: &str, pad: u32, padchar: char) -> String
 {
-    let mut out = String::new();
+    let mut out = String::with_capacity( s.as_bytes().len() + (pad as usize) );
 
     for _ in 0..pad {
         out.push(padchar);
@@ -29,4 +29,3 @@ fn pad_test() {
     assert_eq!(left_pad_char("foo", 2, 'X'), "XXfoo");
     assert_eq!(left_pad_char("bar", 5, '-'), "-----bar");
 }
-
