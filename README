@@ -1,0 +1,10 @@
+leftpad
+-------
+
+Inspired by Keltia leftpad https://github.com/keltia/leftpad
+
+But in Rust.
+
+See built in documentation.
+
+Hubert Figuiere.

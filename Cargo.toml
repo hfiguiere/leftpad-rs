@@ -2,5 +2,9 @@
 name = "leftpad"
 version = "0.1.0"
 authors = ["Hubert Figuière <hub@figuiere.net>"]
+license = "BSD-2-Clause"
+description = "Pad a string to the left"
+repository = "https://github.com/hfiguiere/leftpad-rs"
+keywords = [ "string" ]
 
 [dependencies]
