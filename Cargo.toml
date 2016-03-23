@@ -1,0 +1,6 @@
+[package]
+name = "leftpad"
+version = "0.1.0"
+authors = ["Hubert Figuière <hub@figuiere.net>"]
+
+[dependencies]
