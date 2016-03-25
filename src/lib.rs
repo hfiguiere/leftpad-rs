@@ -3,14 +3,14 @@
 
 
 /// pad a string to the left to ``pad`` length with spaces
-/// If str.len() is less than pad, then the string is returned verbatim
+/// If str.len() is not less than pad, then the string is returned verbatim
 pub fn left_pad(s: &str, pad: usize) -> String
 {
     left_pad_char(s, pad, ' ')
 }
 
 /// pad a string to the left to ``pad`` length with ``padchar``
-/// If str.len() is less than pad, then the string is returned verbatim
+/// If str.len() is not less than pad, then the string is returned verbatim
 pub fn left_pad_char(s: &str, pad: usize, padchar: char) -> String
 {
     let mut out = String::new();
