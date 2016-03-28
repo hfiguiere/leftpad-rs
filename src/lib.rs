@@ -13,7 +13,7 @@ pub fn left_pad(s: &str, pad: usize) -> String
 /// If str.len() is not less than pad, then the string is returned verbatim
 pub fn left_pad_char(s: &str, pad: usize, padchar: char) -> String
 {
-    let mut out = String::new();
+    let mut out = String::with_capacity( s.as_bytes().len() + (pad as usize) );
 
     let len = s.len();
     if pad > len {
@@ -37,4 +37,3 @@ fn pad_test() {
     assert_eq!(left_pad_char("foo", 7, 'X'), "XXXXfoo");
     assert_eq!(left_pad_char("bar", 5, '-'), "--bar");
 }
-
