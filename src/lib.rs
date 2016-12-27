@@ -13,17 +13,21 @@ pub fn left_pad(s: &str, pad: usize) -> String
 /// If str.len() is not less than pad, then the string is returned verbatim
 pub fn left_pad_char(s: &str, pad: usize, padchar: char) -> String
 {
-    let mut out = String::new();
-
     let len = s.len();
     if pad > len {
-        for _ in 0..pad-len {
+        let left_pad = pad - len;
+        let capacity = s.len() + left_pad * padchar.len_utf8();
+        let mut out = String::with_capacity(capacity);
+
+        for _ in 0..left_pad {
             out.push(padchar);
         }
-    }
-    out.push_str(s);
+        out.push_str(s);
 
-    out
+        out
+    } else {
+        s.to_owned()
+    }
 }
 
 #[cfg(test)]
